@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Mars Interactive Map | NYUAD</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="scripts/plugins/tooltip.css"/>
+
+    <!-- google icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+    <!-- fa-icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- bi-icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <!-- Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ==" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin=""></script>
+    <!-- <link rel="stylesheet" href="scripts/leaflet/leaflet.css">
+    <script src='scripts/leaflet/leaflet.js'></script> -->
+
+    <!-- sidebar -->
+    <link rel="stylesheet" href="scripts/plugins/leaflet-sidebar2.css"/>
+    <script src="scripts/plugins/leaflet-sidebar2.js"></script>
+    <!-- sidebar-small -->
+    <link rel="stylesheet" href="scripts/plugins/L.Control.Sidebar.css"/>
+    <script src="scripts/plugins/L.Control.Sidebar.js"></script>
+
+
+    <!-- coordinates -->
+    <link rel="stylesheet" href="scripts/plugins/coord-projection.css">
+    <script src='scripts/plugins/coord-projection.js'></script>
+
+    <!-- easy-button -->
+    <link rel="stylesheet" href="scripts/plugins/easy-button.css">
+    <script src="scripts/plugins/easy-button.js"></script>
+
+
+    <script src='scripts/plugins/leaflet-heatmap.js'></script>
+
+    <!-- search-box -->
+    <link rel="stylesheet" href="scripts/plugins/leaflet-search.css">
+    <script src='scripts/plugins/leaflet-search.js'></script>
+
+    <!-- GeoJSON -->
+    <script defer src='geojson/surfaceFeatures.js'></script>
+    <script defer src='geojson/quadrangles.js'></script>
+    <script defer src='geojson/contacts.js'></script>
+    <script defer src='geojson/geology.js'></script>
+    <script defer src='geojson/structure.js'></script>
+    <script defer src='geojson/ST_Morning_8AM.js'></script>
+    <script defer src='geojson/ST_Noon_12PM.js'></script>
+    <script defer src="myscripts.js"></script>
+</head>
+<body>
+    <header>
+        <div id='title'> <h3>NYUAD’s interactive Map of Mars made with Hope observations</h3></div>
+        <div id='logo-box'><a href="https://marsatlas.org/"><img id='logo' src="./assets/logo.png" alt=""></a></div>
+        <div id='nav'></div>
+    </header>
+
+
+
+    <div id="sidebar" class="sidebar sidebar-left leaflet-touch">
+        <div class="sidebar-content">
+            <div class="sidebar-pane" id="info">
+                <h1 class="sidebar-header">Info<span class="sidebar-close material-symbols-outlined">keyboard_double_arrow_left</span></h1>
+                <div id='infosidebar-info' class='sidebar-info-container'></div>
+            </div>
+            <div class="sidebar-pane active" id="legend">
+                <h1 class="sidebar-header">Legend<span class="sidebar-close material-symbols-outlined">keyboard_double_arrow_left</span></h1>
+                <div id='legend-info' class='sidebar-info-container'></div>
+            </div>
+        </div>
+        <div class="sidebar-tabs">
+            <ul role="tablist">
+                <!-- <li class=><a href="#maps" role="tab"><span class="material-symbols-outlined">map</span></a></li>
+                <li class=""><a href="#layers" role="tab"><span class="material-symbols-outlined">layers</span></a></li> -->
+                <li class=""><a href="#info" role="tab"><i class="bi bi-info-circle"></i></a></li>
+                <li class="active"><a href="#legend" role="tab"><i class="bi bi-list-stars"></i></a></li>
+            </ul>
+            <!-- <ul role="tablist">
+                <li class=""><a href="#info" role="tab"><i class="bi bi-info-circle"></i></a></li>
+            </ul> -->
+        </div>
+    </div>
+
+    <!-- <div id="infosidebar">
+        <div id="infosidebar-info"></div>
+    </div> -->
+
+    <!-- <div id="sidebar" class="sidebar sidebar-left leaflet-touch">
+        <div class="sidebar-content">
+            <div class="sidebar-pane active" id="maps">
+                <h1 class="sidebar-header">Maps<span class="sidebar-close material-symbols-outlined">keyboard_double_arrow_left</span></h1>
+            </div>
+            <div class="sidebar-pane" id="layers">
+
+                <h1 class="sidebar-header">Layers<span class="sidebar-close material-symbols-outlined">keyboard_double_arrow_left</span></h1>
+
+                <div class='sidebar-info-container'>
+                    <div class='sidebar-info-box'>
+                        <h4> Labels</h4>
+                        <div>
+                            <p>Surface Features</p>
+                            <p>Quadrangles</p>
+                        </div>
+                    </div>
+                    <div class='sidebar-info-box'>
+                        <h4>Geology</h4>
+                        <div>
+                            <p>Global Contacts</p>
+                            <p>Geological Units</p>
+                            <p>Surface Structures</p>
+                        </div>
+                    </div>
+                    <div class='sidebar-info-box'>Layer 3
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar-pane" id="legend">
+                <h1 class="sidebar-header">Legend<span class="sidebar-close material-symbols-outlined">keyboard_double_arrow_left</span></h1>
+            </div>
+            <div class="sidebar-pane" id="info">
+                <h1 class="sidebar-header">Info<span class="sidebar-close material-symbols-outlined">keyboard_double_arrow_left</span></h1>
+            </div>
+        </div>
+        <div class="sidebar-tabs">
+            <ul role="tablist">
+                <li class=><a href="#maps" role="tab"><span class="material-symbols-outlined">map</span></a></li>
+                <li class=""><a href="#layers" role="tab"><span class="material-symbols-outlined">layers</span></a></li>
+                <li class=""><a href="#legend" role="tab"><i class="bi bi-list-stars"></i></a></li>
+            </ul>
+            <ul role="tablist">
+                <li class=""><a href="#info" role="tab"><i class="bi bi-info-circle"></i></a></li>
+            </ul>
+        </div>
+    </div> -->
+
+
+
+
+
+    <div id="map" class='sidebar-map'></div>
+
+    <div id='coordinates-box'>Coordinates</div>
+
+</body>
+</html>

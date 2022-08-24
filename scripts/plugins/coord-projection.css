@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono&family=Roboto+Mono&display=swap');
+
+.leaflet-container .leaflet-control-coord-projection {
+    /* display:none; */
+    bottom:0;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 5px #bbb;
+    /* width:125px; */
+    padding: 0 5px;
+    margin:0;
+    color: #000;
+    /* font: 12px/1.5 'Open Sans', sans-serif; */
+    font-weight: 500;
+ }
+
+ #coordinates-box{
+     display: flex;
+     justify-content:center;
+     align-items:center;
+     position:absolute;
+     bottom:0;
+     height: auto;
+     width:150px;
+     left:50%;
+     margin: 10px 10px 0px -75px;
+     z-index:1000;
+
+     background-color: rgba(255, 255, 255, 0.9);
+     box-shadow: 0 0 5px #bbb;
+     /* width:125px; */
+     padding: 0 5px;
+     color: #222;
+     /* font: 12px/1.5 'Roboto Mono', monospace; */
+     font: 12px/1.5 'Azeret Mono', monospace;
+     /* "Helvetica Neue", Arial, Helvetica, sans-serif; */
+     font-weight: 500;
+     border-radius: 4px 4px 0 0;
+ }
