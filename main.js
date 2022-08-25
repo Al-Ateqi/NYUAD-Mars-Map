@@ -175,7 +175,7 @@ updateinfoBox = function (layer) {
 
 exi6=L.tileLayer('tiles/Tiles-WGS84/{z}/{x}/{y}.png',{
     // opacity:0.5,
-}).addTo(map);
+});
 
 exi7=L.tileLayer('tiles/Tiles/{z}/{x}/{y}.png',{
     // opacity:0.5,
@@ -823,20 +823,20 @@ map.on('overlayremove', function() {
     contRender(zoom);
 });
 
-map.on('baselayerchange', function(e){
-    // console.log(map.activeBaseLayer);
-    // console.log(e.name);
-    if(e.name=='EXI-Final-Maptiler-WGS84'){
-        console.log(e.name);
-        map.options.crs=L.CRS.EPSG4326;
-        map.fitWorld();
-    }else{
-        console.log('crs=3857');
-        map.options.crs=L.CRS.EPSG3857;
-    };
+// map.on('baselayerchange', function(e){
+//     // console.log(map.activeBaseLayer);
+//     // console.log(e.name);
+//     if(e.name=='EXI-Final-Maptiler-WGS84'){
+//         console.log(e.name);
+//         map.options.crs=L.CRS.EPSG4326;
+//         map.fitWorld();
+//     }else{
+//         console.log('crs=3857');
+//         map.options.crs=L.CRS.EPSG3857;
+//     };
 
-    // map.activeBaseLayer=e.layer;
-});
+//     // map.activeBaseLayer=e.layer;
+// });
 
 
 function onOverlayAdd(){
