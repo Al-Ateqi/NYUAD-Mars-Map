@@ -184,18 +184,18 @@ exi6=L.tileLayer('tiles/Tiles-WGS84/{z}/{x}/{y}.png',{
 var whiteDotIcon = L.icon({
     iconUrl: 'assets/icon-white-dot.png',
     // 'https://cdn-icons-png.flaticon.com/512/565/565665.png',
-    iconSize: [10, 10], // size of the icon
+    iconSize: [8, 8], // size of the icon
     // shadowSize: [50, 64], // size of the shadow
-    iconAnchor: [5, 5], // point of the icon which will correspond to marker's location
+    iconAnchor: [4, 4], // point of the icon which will correspond to marker's location
     // shadowAnchor: [4, 62],  // the same for the shadow
     popupAnchor: [0, -6], // point from which the popup should open relative to the iconAnchor
     className: 'behind',
 });
 var blackDotIcon = L.icon({
     iconUrl: 'assets/icon-black-dot.png',
-    iconSize: [14, 14], // size of the icon
+    iconSize: [10, 10], // size of the icon
     // shadowSize: [50, 64], // size of the shadow
-    iconAnchor: [7, 7], // point of the icon which will correspond to marker's location
+    iconAnchor: [5, 5], // point of the icon which will correspond to marker's location
     // shadowAnchor: [4, 62],  // the same for the shadow
     popupAnchor: [0, -6] // point from which the popup should open relative to the iconAnchor
 });
@@ -227,7 +227,7 @@ function sfPopupContent(feature){
     `;
     return html;
 }
-var sf_major_array=['Antoniadi', 'Cassini', 'Echus Chasma', 'Gale', 'Greeley', 'Hadley', 'Hellas Planitia', 'Huygens', 'Newton', 'Noctis Labyrinthus', 'Schiaparelli', 'Valles Marineris', 'Zunil'];
+var sf_major_array=['Olympus Mons','Antoniadi', 'Cassini', 'Echus Chasma', 'Gale', 'Greeley', 'Hadley', 'Hellas Planitia', 'Huygens', 'Newton', 'Noctis Labyrinthus', 'Schiaparelli', 'Valles Marineris', 'Zunil'];
 
 var sf=[];
 for (let i=0; i<=8;i++){
