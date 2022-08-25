@@ -153,27 +153,31 @@ updateinfoBox = function (layer) {
 
 //Layers------------------------------------------------------------------------
 
-exi=L.tileLayer('tiles/Tiles-Ali/{z}/{x}/{y}.png',{
+// exi=L.tileLayer('tiles/Tiles-Ali/{z}/{x}/{y}.png',{
 
-});
+// });
 
-exi2=L.tileLayer('tiles/Tiles-Ahmed/{z}/{x}/{-y}.png',{
+// exi2=L.tileLayer('tiles/Tiles-Ahmed/{z}/{x}/{-y}.png',{
 
-});
+// });
 
-exi3=L.tileLayer('tiles/Tiles-new/{z}/{x}/{y}.png',{
+// exi3=L.tileLayer('tiles/Tiles-new/{z}/{x}/{y}.png',{
 
-});
+// });
 
-exi4=L.tileLayer('tiles/Tiles-newest/{z}/{x}/{y}.png',{
-    // opacity:0.5,
-});
+// exi4=L.tileLayer('tiles/Tiles-newest/{z}/{x}/{y}.png',{
+//     // opacity:0.5,
+// });
 
-exi5=L.tileLayer('tiles/Tiles-newest2/{z}/{x}/{y}.png',{
-    // opacity:0.5,
-});
+// exi5=L.tileLayer('tiles/Tiles-newest2/{z}/{x}/{y}.png',{
+//     // opacity:0.5,
+// });
 
 exi6=L.tileLayer('tiles/Tiles-WGS84/{z}/{x}/{y}.png',{
+    // opacity:0.5,
+}).addTo(map);
+
+exi7=L.tileLayer('tiles/Tiles/{z}/{x}/{y}.png',{
     // opacity:0.5,
 }).addTo(map);
 
@@ -845,8 +849,8 @@ var baseMaps = {
     // "EXI-2": exi2,
     // "EXI-3": exi3,
     // "EXI-Final-QGIS":exi4,
-    // "EXI-Final-Maptiler":exi5,
-    // "EXI-Final-Maptiler-WGS84":exi6,
+    "EXI-original":exi6,
+    "EXI-photoshopped":exi7,
 };
 var sfDummy=L.layerGroup();
 var quadDummy=L.layerGroup();
