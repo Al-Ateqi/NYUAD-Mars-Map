@@ -179,6 +179,10 @@ exi6=L.tileLayer('tiles/Tiles-WGS84/{z}/{x}/{y}.png',{
 
 exi7=L.tileLayer('tiles/Tiles/{z}/{x}/{y}.png',{
     // opacity:0.5,
+});
+
+exi8=L.tileLayer('https://github.com/Al-Ateqi/MarsMap/raw/main/Generating%20Map%20Tiles%20using%20Python/Tiles%20Manually%20Generated/{z}/{x}/{y}.png',{
+    // opacity:0.5,
 }).addTo(map);
 
 //Base Map
@@ -851,6 +855,7 @@ var baseMaps = {
     // "EXI-Final-QGIS":exi4,
     "EXI-original":exi6,
     "EXI-photoshopped":exi7,
+    "EXI-tiles using python":exi8,
 };
 var sfDummy=L.layerGroup();
 var quadDummy=L.layerGroup();
