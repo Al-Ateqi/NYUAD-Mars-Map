@@ -855,8 +855,8 @@ map.setView([0,0]);
 // });
 
 
-var options = {interval: 20,
-               showOriginLabel: true,
+var options = {interval: 7,
+               showOriginLabel: false,
                redraw: 'move',
                zoomIntervals: [
                 {start: 0, end: 3, interval: 30},
