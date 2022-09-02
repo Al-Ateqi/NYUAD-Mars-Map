@@ -154,7 +154,7 @@ updateinfoBox = function (layer) {
 //Layers------------------------------------------------------------------------
 
 //Base Map
-exi=L.tileLayer('https://github.com/Al-Ateqi/MarsMap/raw/main/Tiles-using-Python/tiles/{z}/{x}/{y}.png',{
+exi=L.tileLayer('https://github.com/Al-Ateqi/MarsMap/raw/main/Tiles-using-Python/tiles-4326/{z}/{x}/{y}.png',{
 }).addTo(map);
 
 
