@@ -853,3 +853,16 @@ map.setView([0,0]);
 // map.panBy([-300 / 2, 0], {
 //     duration: 0.05
 // });
+
+
+var options = {interval: 20,
+               showOriginLabel: true,
+               redraw: 'move',
+               zoomIntervals: [
+                {start: 0, end: 3, interval: 30},
+                {start: 4, end: 5, interval: 5},
+                {start: 6, end: 7, interval: 1}
+            ]};
+
+L.simpleGraticule(options).addTo(map);
+
