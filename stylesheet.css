@@ -71,7 +71,7 @@ header {
 
 #map{
     width: 100vw;
-    height:-webkit-calc(100vh - 60px);
+    height:calc(100vh - 60px);
     background-color: #222;
     margin:0;
     left: 0;
