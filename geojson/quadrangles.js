@@ -1,4 +1,4 @@
-{
+var quadrangles ={
     "type": "FeatureCollection",
     "features": [
         {
@@ -628,7 +628,7 @@
             "properties": {
                 "number": "MC-18",
                 "name": "Coprates",
-                "info": "This quadrangle is named after a central trough of Valles Marineris called Coprates Chasma. The quadrangle is well-known for depicting the Valles Marineris Canyon System, also known as the "Grand Canyon of Mars." Water can also  be found in this quadrangle, with ancient river valleys and stream channel networks visible as inverted terrain and lakes within Valles Marineris."
+                "info": "This quadrangle is named after a central trough of Valles Marineris called Coprates Chasma. The quadrangle is well-known for depicting the Valles Marineris Canyon System, also known as the \"Grand Canyon of Mars.\" Water can also  be found in this quadrangle, with ancient river valleys and stream channel networks visible as inverted terrain and lakes within Valles Marineris."
             }
         },
         {
@@ -803,7 +803,7 @@
             "properties": {
                 "number": "MC-23",
                 "name": "Aeolis",
-                "info": "The name of this quadrangle is derived from the name of Aeolos, the ruler of the winds. This quadrangle is known for Gusev crater and Gale crater, famous as landing sites for Spirit rover and Curiosity rover respectively. Gusev Crater was thought to be an old lake bed because a vast, ancient river valley called Ma'adim Vallis is present at the southern rim. The lakebed sediments, however, appear to have been covered by a volcanic flow. Gale Crater, located in the northwest corner of the Aeolis quadrangle, is of particular interest to geologists because it features a 2–4 km high mound of stratified sedimentary rocks that NASA named "Mount Sharp" in honour of Robert P. Sharp, an early Mars planetary scientist."
+                "info": "The name of this quadrangle is derived from the name of Aeolos, the ruler of the winds. This quadrangle is known for Gusev crater and Gale crater, famous as landing sites for Spirit rover and Curiosity rover respectively. Gusev Crater was thought to be an old lake bed because a vast, ancient river valley called Ma'adim Vallis is present at the southern rim. The lakebed sediments, however, appear to have been covered by a volcanic flow. Gale Crater, located in the northwest corner of the Aeolis quadrangle, is of particular interest to geologists because it features a 2–4 km high mound of stratified sedimentary rocks that NASA named \"Mount Sharp\" in honour of Robert P. Sharp, an early Mars planetary scientist."
             }
         },
         {
@@ -943,7 +943,7 @@
             "properties": {
                 "number": "MC-27",
                 "name": "Noachis",
-                "info": "The quadrangle is located between the Argyre and Hellas impact basins on Mars. Noachis Terra and the western half of Hellas Planitia make up the Noachis quadrangle. It is thickly studded with impact craters, making it one of Mars' oldest landforms—hence the name "Noachian" is given for one of the planet's earliest periods of history. Furthermore, numerous previously buried craters are suddenly surfacing, thanks to Noachis' extraordinary age, which has allowed ancient craters to be filled and re-exposed."
+                "info": "The quadrangle is located between the Argyre and Hellas impact basins on Mars. Noachis Terra and the western half of Hellas Planitia make up the Noachis quadrangle. It is thickly studded with impact craters, making it one of Mars' oldest landforms—hence the name \"Noachian\" is given for one of the planet's earliest periods of history. Furthermore, numerous previously buried craters are suddenly surfacing, thanks to Noachis' extraordinary age, which has allowed ancient craters to be filled and re-exposed."
             }
         },
         {
@@ -1048,8 +1048,8 @@
             "properties": {
                 "number": "MC-30",
                 "name": "Mare Australe",
-                "info": "The name of the quadrangle comes from an ancient name for the Planum Australe, a wide plain that surrounds the polar cap. It is possible that Dorsa Argenta, a part of this quadrangle, is an old ice-rich deposit . It has a series of sinuous, branched ridges that look like eskers, which occur when streams run beneath glaciers. Angustus Labyrinthus, a complex of connecting valleys or ridges nicknamed the "Inca City," is also located inside the quadrangle."
+                "info": "The name of the quadrangle comes from an ancient name for the Planum Australe, a wide plain that surrounds the polar cap. It is possible that Dorsa Argenta, a part of this quadrangle, is an old ice-rich deposit . It has a series of sinuous, branched ridges that look like eskers, which occur when streams run beneath glaciers. Angustus Labyrinthus, a complex of connecting valleys or ridges nicknamed the \"Inca City,\" is also located inside the quadrangle."
             }
         }
     ]
-}
+};
