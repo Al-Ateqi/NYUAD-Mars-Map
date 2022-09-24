@@ -33023,7 +33023,7 @@ var surfaceFeatures={
     "Additional Info":"",
     "Location":"18.4N, 133.56W",
     "Description":"None",
-    "Zoom":1
+    "Zoom":4
     }
   },
   {
