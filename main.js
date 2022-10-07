@@ -39,7 +39,7 @@ var map = L.map('map',{
     maxBounds:bounds,
     maxBoundsViscosity: 1,
     minZoom:0.5,
-    maxZoom:8,
+    maxZoom:4,
     // continuousWorld: true,
     // noWrap:false,
     crs: L.CRS.EPSG4326,
