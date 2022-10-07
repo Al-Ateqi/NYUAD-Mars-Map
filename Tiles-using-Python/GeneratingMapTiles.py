@@ -10,7 +10,7 @@ def GenerateTiles(imageDir,minzoom,maxzoom,projection,path):
     width, height = img.size
     
     if(projection=='4326'):
-        if(width==2*height):
+        if(width==2*height or True):
             os.makedirs(path)
             for zoom in range(minzoom, maxzoom+1):
                 pathZ=path+'/{z}'.format(z=zoom)
@@ -63,7 +63,9 @@ def GenerateTiles(imageDir,minzoom,maxzoom,projection,path):
     print('images number: '+cont)
 
 
-img=r"C:\Users\User\Desktop\Internships\Mars Research Project - NYUAD Internship\Mars Research NYUAD Internship\New Mars Maps\Mars Map Mercator.png"
-path='C:/Users/User/Desktop/GitHub/Mars-Map-Leaflet/Tiles-3857'
 
-GenerateTiles(img,0,4,'3857',path) #map image path, minzoom, maxzoom, map projection (3857,4326), the generated tiles file path
+#img=r"C:\Users\User\Desktop\Internships\Mars Research Project - NYUAD Internship\Mars Research NYUAD Internship\New Mars Maps\Mars Map Mercator.png"
+img='C:/Users/hp/Downloads/Full_map_photoshopped.tif'
+#path='C:/Users/hp/Desktop/Tiles_4326'
+
+GenerateTiles(img,0,4,'4326',path) #map image path, minzoom, maxzoom, map projection (3857,4326), the generated tiles file path
