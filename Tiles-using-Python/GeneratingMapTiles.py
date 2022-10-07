@@ -36,7 +36,7 @@ def GenerateTiles(imageDir,minzoom,maxzoom,projection,path):
                 print('please use map in equirectangular projection (2:1 width to height ratio)')
                 
     elif(projection=='3857'):
-        if(width==height):
+        if(width==height or True):
             os.makedirs(path)
             for zoom in range(minzoom, maxzoom+1):
                 pathZ=path+'/{z}'.format(z=zoom)
@@ -65,7 +65,8 @@ def GenerateTiles(imageDir,minzoom,maxzoom,projection,path):
 
 
 #img=r"C:\Users\User\Desktop\Internships\Mars Research Project - NYUAD Internship\Mars Research NYUAD Internship\New Mars Maps\Mars Map Mercator.png"
-img='C:/Users/hp/Downloads/Full_map_photoshopped.tif'
+#img='C:/Users/hp/Downloads/Full_map_photoshopped.tif'
+img='C:/Users/hp/Desktop/FullMapMercator.tif'
 #path='C:/Users/hp/Desktop/Tiles_4326'
 
-GenerateTiles(img,0,4,'4326',path) #map image path, minzoom, maxzoom, map projection (3857,4326), the generated tiles file path
+GenerateTiles(img,0,4,'3857',path) #map image path, minzoom, maxzoom, map projection (3857,4326), the generated tiles file path
