@@ -619,32 +619,32 @@ struc=L.featureGroup([struc,struc_transparent]);
 
 
 //Temperature-------------------------------------------------------------------
-var tempheatmap=[];
-let min=0;
-let max=0;
-// temperatureMorning
-tempatNoon.features.forEach(function(feature){
-    var value=(feature.properties["Surface Temperature (K)"]+273.15-104.86750640869138)/(261.1108154296875-104.86750640869138);
-    tempheatmap.push([feature.geometry.coordinates[1], feature.geometry.coordinates[0], value]);
-    if(value<min|min==0)
-        min=value;
-    if(value>max)
-        max=value;
-});
+// var tempheatmap=[];
+// let min=0;
+// let max=0;
+// // temperatureMorning
+// tempatNoon.features.forEach(function(feature){
+//     var value=(feature.properties["Surface Temperature (K)"]+273.15-104.86750640869138)/(261.1108154296875-104.86750640869138);
+//     tempheatmap.push([feature.geometry.coordinates[1], feature.geometry.coordinates[0], value]);
+//     if(value<min|min==0)
+//         min=value;
+//     if(value>max)
+//         max=value;
+// });
 // console.log(min+" "+max);
 
-var heat = L.heatLayer(tempheatmap,{
-    radius: 10,
-    gradient:{'0': '#042e69',
-    '0.166': '#2f79b6',
-    '0.333': '#91c4e0',
-    '0.5': '#fff',
-    '0.666': '#f59f82',
-    '0.833': '#c0373f',
-    '1': '#500418'},
-    // radius:25,
-    // blur:10
-});
+// var heat = L.heatLayer(tempheatmap,{
+//     radius: 10,
+//     gradient:{'0': '#042e69',
+//     '0.166': '#2f79b6',
+//     '0.333': '#91c4e0',
+//     '0.5': '#fff',
+//     '0.666': '#f59f82',
+//     '0.833': '#c0373f',
+//     '1': '#500418'},
+//     // radius:25,
+//     // blur:10
+// });
 
 // globe.addTo(map);
 
