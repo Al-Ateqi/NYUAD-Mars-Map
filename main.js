@@ -1,5 +1,5 @@
 function unique(data, property) {
-    // return data.map(item => item.properties[property])
+    // return data.map(item => item.properties[property]);
     // .filter((value, index, self) => self.indexOf(value) === index)
     let unique = [];
     if (typeof property == 'string') {
