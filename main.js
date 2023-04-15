@@ -68,6 +68,9 @@ function formatlat(num) {
     }
     return '0' + String(s).padEnd(5, '0');
 }
+// Grid and Coordinates
+/*
+
 let coordP = L.control.coordProjection({
     position: 'bottomleft',
     separator: ' | ',
@@ -75,7 +78,7 @@ let coordP = L.control.coordProjection({
     lngFormatter: function (lng) { lng = Math.round(lng * 1000) / 1000; return (lng >= 0) ? formatlng(lng) + 'E' : formatlng(-lng) + 'W'; },
     numDigits: 2,
 }).addTo(map);
-
+*/
 
 //Zoom
 L.control.zoom({
@@ -156,7 +159,7 @@ updateinfoBox = function (layer) {
 //Layers------------------------------------------------------------------------
 
 //Base Map
-exi = L.tileLayer('https://github.com/Al-Ateqi/NYUAD-Mars-Map/raw/main/Tiles-using-Python/Map Tiles/{z}/{x}/{y}.png', {
+exi = L.tileLayer('https://github.com/Al-Ateqi/NYUAD-Mars-Map/raw/main/Tiles-using-Python/Latest-Map-Tiles/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 
