@@ -3,7 +3,7 @@ from PIL import Image
 import os
 from numba import jit
 # This code will work for equirectangular projection map and Mercator projection full map images
-path = 'Map Tiles'
+path = 'Latest-Map-Tiles'
 
 
 @jit
@@ -73,8 +73,8 @@ def GenerateTiles(imageDir, minzoom, maxzoom, projection, path):
 
 #img=r"C:\Users\User\Desktop\Internships\Mars Research Project - NYUAD Internship\Mars Research NYUAD Internship\New Mars Maps\Mars Map Mercator.png"
 # img='C:/Users/hp/Downloads/Full_map_photoshopped.tif'
-img = 'imagery map.png'
+img = 'To be used in Atlas.png'
 # path='C:/Users/hp/Desktop/Tiles_4326'
 
 # map image path, minzoom, maxzoom, map projection (3857,4326), the generated tiles file path
-GenerateTiles(img, 0, 5, '4326', path)
+GenerateTiles(img, 0, 6, '4326', path)
