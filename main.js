@@ -367,7 +367,7 @@ function quadStyle(feature) {
         opacity: 1,
         color: '#080808',
         fillColor: 'transparent',
-        fillOpacity: 0,
+        fillOpacity: 0.1,
     };
 }
 
